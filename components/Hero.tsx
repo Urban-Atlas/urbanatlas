@@ -98,20 +98,18 @@ export default function Hero() {
           {/* LEFT SIDE CONTENT */}
           <div className="flex flex-col items-start w-full md:w-[55%] lg:w-full">
             {/* Pill Badge */}
-            <div className="inline-flex items-center gap-1.5 rounded-full bg-[#FFF1F3] text-[#FF2D3F] text-[13px] font-bold px-[15px] py-[7px] mb-4 select-none">
+            <div className="inline-flex items-center gap-1.5 rounded-full bg-[#FFF1F3] text-[#FF2D3F] text-[11px] font-bold px-[15px] py-[7px] mb-4 select-none">
               <MapPinIcon className="h-4 w-4" />
               Lucknow Real Estate Intelligence
             </div>
 
             {/* Typography Matched Heading */}
-            <h1 className="text-[48px] md:text-[56px] font-extrabold leading-[1.08] text-[#111827] tracking-tight mb-3">
-              Connecting<br />
-              Plot Owners<br />
-              With <span className="text-[#FF2D3F]">Serious Buyers.</span>
+            <h1 className="text-[30px] sm:text-[48px] md:text-[56px] font-extrabold leading-[1.08] text-[#111827] tracking-tight mb-3">
+              <span className="text-[26px] sm:text-inherit whitespace-nowrap">Connecting Plot Owners <br /> With </span> <span className="text-[#FF2D3F] text-[26px] sm:text-inherit whitespace-nowrap">Serious Buyers</span><br /> 
             </h1>
 
             {/* Subheading */}
-            <p className="text-[16px] text-[#4B5563] leading-[1.5] max-w-lg mb-6 font-medium">
+            <p className="text-[14px] text-[#4B5563] leading-[1.5] max-w-lg mb-6 font-medium">
               We help you reach genuine buyers and sell your plot with confidence.
             </p>
 
