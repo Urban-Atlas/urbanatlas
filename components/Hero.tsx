@@ -105,7 +105,7 @@ export default function Hero() {
 
             {/* Typography Matched Heading */}
             <h1 className="text-[30px] sm:text-[48px] md:text-[56px] font-extrabold leading-[1.08] text-[#111827] tracking-tight mb-3">
-              <span className="text-[26px] sm:text-inherit whitespace-nowrap">Connecting Plot Owners <br /> With </span> <span className="text-[#FF2D3F] text-[26px] sm:text-inherit whitespace-nowrap">Serious Buyers</span><br /> 
+              <span className="text-[26px] sm:text-[56px]">Connecting Plot Owners <br /> With</span> <span className="text-[#FF2D3F] text-[26px] sm:text-[56px]">Serious Buyers</span><br /> 
             </h1>
 
             {/* Subheading */}
