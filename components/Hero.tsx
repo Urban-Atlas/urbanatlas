@@ -39,39 +39,22 @@ export default function Hero() {
       {/* Visual backdrop gradient to replicate the exact layout proportions */}
       <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-b from-[#FFFDFD] to-[#FFF8F8] opacity-60 pointer-events-none z-0 hidden lg:block" />
 
-      {/* Right Background Artwork - Desktop Only */}
-      <div className="hidden lg:block absolute right-0 top-[-10px] lg:w-[780px] lg:h-[660px] z-0">
-        <Image
-          src="/hero-left.png"
-          alt=""
-          fill
-          priority
-          className="object-contain"
-        />
-      </div>
-
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 relative z-10">
         <div className="flex flex-col md:flex-row lg:grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* LEFT SIDE CONTENT */}
           <div className="flex flex-col items-start w-full md:w-[55%] lg:w-full">
-            {/* Pill Badge */}
-            <div className="inline-flex items-center gap-1.5 rounded-full bg-[#FFF1F3] text-[#FF2D3F] text-[11px] font-bold px-[15px] py-[7px] mb-4 select-none">
-              <MapPinIcon className="h-4 w-4" />
-              Lucknow Real Estate Intelligence
-            </div>
-
             {/* Typography Matched Heading */}
-            <h1 className="text-[30px] sm:text-[48px] md:text-[56px] font-extrabold leading-[1.08] text-[#111827] tracking-tight mb-3 break-words">
-              <span className="text-[26px] sm:text-[56px]">Connecting Plot Owners <br />With</span> <span className="text-[#FF2D3F] text-[26px] sm:text-[56px]">Serious Buyers</span><br /> 
+            <h1 className="text-[6.8vw] sm:text-[48px] md:text-[56px] font-extrabold leading-[1.08] text-[#111827] tracking-tight mb-3 whitespace-nowrap">
+              Plots. <span className="text-[#FF2D3F]">Sold.</span> Faster.
             </h1>
 
             {/* Subheading */}
-            <p className="text-[14px] text-[#4B5563] leading-[1.5] max-w-lg mb-6 font-medium">
-              We help you reach genuine buyers and sell your plot with confidence.
+            <p className="text-[3.8vw] sm:text-[16px] text-[#4B5563] leading-[1.5] max-w-lg mb-6 font-medium whitespace-nowrap">
+              Genuine buyers. Better deals.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-[14px] w-full sm:w-auto mb-5">
+            <div className="flex flex-col sm:flex-row gap-[14px] w-full sm:w-auto mb-6">
               <MotionLink
                 href="/submit-plot"
                 className="inline-flex min-h-[52px] w-full sm:w-auto items-center justify-center gap-2.5 bg-[#FF2D3F] hover:bg-[#E81F34] text-white rounded-[14px] px-8 py-4 font-extrabold text-[15px] transition-all duration-200 premium-shadow"
@@ -93,20 +76,19 @@ export default function Hero() {
             </div>
 
             {/* Trust points with Red Checks */}
-            <div className="flex flex-wrap items-center gap-3 sm:gap-5">
+            {/* <div className="flex flex-wrap items-center gap-3 sm:gap-4">
               {[
                 { text: 'Free Submission' },
-                { text: 'No Brokerage' },
                 { text: 'Authority Plots Only' },
               ].map((item) => (
-                <div key={item.text} className="flex items-center gap-2 text-[14px] font-bold text-[#4B5563]">
-                  <RedCheckIcon className="h-4.5 w-4.5 text-[#FF2D3F] flex-shrink-0" />
+                <div key={item.text} className="flex items-center gap-2 bg-[#F9FAFB] border border-[#E5E7EB] rounded-xl px-4 py-2 text-[13px] font-extrabold text-[#4B5563] shadow-[0px_2px_8px_rgba(0,0,0,0.01)] hover:border-gray-300 transition-all duration-200 whitespace-nowrap">
+                  <RedCheckIcon className="h-4 w-4 text-[#FF2D3F] flex-shrink-0" />
                   {item.text}
                 </div>
               ))}
-            </div>
+            </div> */}
 
-            <div className="mt-5 flex w-full items-center justify-between gap-3 rounded-2xl border border-[#F3F4F6] bg-[#FFFDFD] p-4 lg:hidden">
+            {/* <div className="mt-5 flex w-full items-center justify-between gap-3 rounded-2xl border border-[#F3F4F6] bg-[#FFFDFD] p-4 lg:hidden">
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-[#25D366] animate-pulse" />
                 <span className="text-xs font-extrabold text-[#111827]">Lucknow Live</span>
@@ -116,15 +98,15 @@ export default function Hero() {
                 <span><span className="text-[#FF2D3F]">200+</span> Plots</span>
                 <span><span className="text-[#FF2D3F]">500+</span> Buyers</span>
               </div>
-            </div>
+            </div> */}
           </div>
 
-          {/* Mobile/Tablet Image - Inline */}
-          <div className="hidden md:block w-full md:w-[40%] lg:hidden mt-8 md:mt-0 flex-shrink-0">
-            <div className="relative w-full h-[250px] sm:h-[350px] md:h-[300px] max-w-sm md:max-w-md mx-auto">
+          {/* RIGHT SIDE CONTENT - Image containing stats and illustration */}
+          <div className="w-full md:w-[45%] lg:w-full mt-8 md:mt-0 flex-shrink-0 relative z-10">
+            <div className="relative w-full h-[280px] sm:h-[360px] md:h-[300px] lg:h-[480px] max-w-md lg:max-w-xl mx-auto">
               <Image
                 src="/hero-left.png"
-                alt="Lucknow Real Estate"
+                alt="Urban Atlas Plot Stats"
                 fill
                 priority
                 className="object-contain"

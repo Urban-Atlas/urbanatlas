@@ -40,7 +40,7 @@ export default function Navbar() {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 h-20 flex items-center justify-between">
         {/* Left Side Brand Logo */}
         <Link href="/" className="hover:opacity-95 transition-opacity">
-          <Logo showTagline={true} />
+          <Logo showTagline={false} />
         </Link>
 
         {/* Center / Right Links and CTA */}

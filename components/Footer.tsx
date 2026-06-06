@@ -40,23 +40,23 @@ export default function Footer() {
   return (
     <footer className="bg-white border-t border-[#F3F4F6] pt-8 sm:pt-12 lg:pt-16 pb-6 sm:pb-8 w-full" id="footer">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10 mb-8 sm:mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 mb-8 sm:mb-10">
           {/* LEFT COLUMN: Logo Stack */}
           <div className="flex flex-col items-start">
             <Logo className="mb-4" showTagline={true} />
           </div>
 
           {/* CENTER COLUMN: Quick Links */}
-          <div className="flex flex-col items-start">
-            <h4 className="font-extrabold text-[15px] text-[#111827] uppercase tracking-wider mb-5">
+          <div className="flex flex-col items-start w-full">
+            <h4 className="font-extrabold text-[15px] text-[#111827] uppercase tracking-wider mb-3 sm:mb-5">
               Quick Links
             </h4>
-            <ul className="space-y-3.5">
+            <ul className="flex flex-wrap gap-x-6 gap-y-2.5 sm:flex-col sm:space-y-3.5 sm:gap-0 w-full">
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-[14px] font-bold text-[#4B5563] hover:text-[#FF2D3F] transition-colors"
+                    className="text-[14px] font-bold text-[#4B5563] hover:text-[#FF2D3F] transition-colors whitespace-nowrap"
                   >
                     {link.label}
                   </Link>
@@ -66,30 +66,30 @@ export default function Footer() {
           </div>
 
           {/* RIGHT COLUMN: Contact Information */}
-          <div className="flex flex-col items-start col-span-2 sm:col-span-1">
+          <div className="flex flex-col items-start sm:col-span-2 lg:col-span-1">
             <h4 className="font-extrabold text-[15px] text-[#111827] uppercase tracking-wider mb-5">
               Contact Us
             </h4>
             <ul className="space-y-4">
-              <li className="flex items-center gap-3 text-[14px] font-bold text-[#4B5563]">
-                <div className="w-[30px] h-[30px] rounded-full bg-emerald-50 flex items-center justify-center flex-shrink-0">
+              <li className="flex items-start gap-3 text-[14px] font-bold text-[#4B5563]">
+                <div className="w-[30px] h-[30px] rounded-full bg-emerald-50 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <WhatsAppIcon className="h-4.5 w-4.5 text-[#25D366]" />
                 </div>
-                <span>+91 8375884211</span>
+                <span className="pt-1">+91 8375884211</span>
               </li>
-              <li className="flex items-center gap-3 text-[14px] font-bold text-[#4B5563]">
-                <div className="w-[30px] h-[30px] rounded-full bg-red-50 flex items-center justify-center flex-shrink-0">
+              <li className="flex items-start gap-3 text-[14px] font-bold text-[#4B5563]">
+                <div className="w-[30px] h-[30px] rounded-full bg-red-50 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <EnvelopeIcon className="h-4 w-4" />
                 </div>
-                <a href="mailto:email@urbanatlas.in" className="hover:text-[#FF2D3F] transition-colors">
+                <a href="mailto:email@urbanatlas.in" className="hover:text-[#FF2D3F] transition-colors pt-1">
                   email@urbanatlas.in
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-[14px] font-bold text-[#6B7280]">
-                <div className="w-[30px] h-[30px] rounded-full bg-gray-50 flex items-center justify-center flex-shrink-0">
+              <li className="flex items-start gap-3 text-[14px] font-bold text-[#6B7280]">
+                <div className="w-[30px] h-[30px] rounded-full bg-gray-50 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <ClockIcon className="h-4 w-4" />
                 </div>
-                <span>Response Time: Usually within 24 hours.</span>
+                <span className="pt-1">Response Time: Usually within 24 hours.</span>
               </li>
             </ul>
           </div>

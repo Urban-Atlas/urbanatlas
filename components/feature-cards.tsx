@@ -86,7 +86,6 @@ export default function FeatureCards() {
               <ul className="space-y-3.5 w-full">
                 {[
                   'Connect with serious buyers',
-                  'No brokerage commitment',
                   'Free & easy submission',
                   'Market guidance included',
                 ].map((item) => (

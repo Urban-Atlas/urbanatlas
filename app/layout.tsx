@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     'private property intelligence Lucknow',
   ],
   authors: [{ name: 'Urban Atlas' }],
+  icons: {
+    icon: '/urban-atlas-logo.png',
+  },
   openGraph: {
     title: 'Urban Atlas | Verified Resale Plot Intelligence in Lucknow',
     description:

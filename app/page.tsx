@@ -11,7 +11,7 @@ import CtaBanner     from '@/components/cta-banner'
 import Footer        from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Urban Atlas | Lucknow Real Estate Intelligence',
+  title: 'Urban Atlas | Plots. Sold. Faster.',
   description:
     'Connecting plot owners with serious buyers in Lucknow. Submit your plot for free and reach genuine buyers across Gomti Nagar, Sushant Golf City, Vrindavan Yojana and more.',
   keywords: [
@@ -23,8 +23,11 @@ export const metadata: Metadata = {
     'Urban Atlas',
   ],
   authors: [{ name: 'Urban Atlas' }],
+  icons: {
+    icon: '/urban-atlas-logo.png',
+  },
   openGraph: {
-    title: 'Urban Atlas | Lucknow Real Estate Intelligence',
+    title: 'Urban Atlas | Plots. Sold. Faster.',
     description:
       'Connecting plot owners with serious buyers in Lucknow.',
     url: 'https://urbanatlas.in',
