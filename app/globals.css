@@ -166,9 +166,51 @@ nav.fixed {
   }
 }
 
+
 /* Font rendering optimization on mobile */
 @media (max-width: 1023px) {
   body {
     text-rendering: optimizeSpeed;
   }
 }
+
+/* ================================
+   Mobile (< 640px) Specific Polish
+   ================================ */
+
+@media (max-width: 639px) {
+  /* Tighter section heading bottom margin */
+  section h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  /* Prevent h2 from being oversized on small phones */
+  h2 {
+    font-size: clamp(1.35rem, 6vw, 1.75rem) !important;
+    line-height: 1.2;
+  }
+
+  /* Reduce section vertical padding across the board on mobile */
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  /* But let sections that already have explicit mobile classes override this */
+  section[class*="py-8"],
+  section[class*="py-10"] {
+    padding-top: revert;
+    padding-bottom: revert;
+  }
+
+  /* Tighten the feature card checklist text */
+  ul li span {
+    font-size: 13px;
+  }
+
+  /* CTA buttons on mobile: full width feel */
+  .cta-mobile-full {
+    width: 100%;
+  }
+}
+

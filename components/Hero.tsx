@@ -35,7 +35,7 @@ function RedCheckIcon({ className }: { className?: string }) {
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white pt-8 pb-10">
+    <section className="relative overflow-hidden bg-white pt-6 pb-8 sm:pt-8 sm:pb-10">
       {/* Visual backdrop gradient to replicate the exact layout proportions */}
       <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-b from-[#FFFDFD] to-[#FFF8F8] opacity-60 pointer-events-none z-0 hidden lg:block" />
 
@@ -62,7 +62,7 @@ export default function Hero() {
 
             {/* Typography Matched Heading */}
             <h1 className="text-[30px] sm:text-[48px] md:text-[56px] font-extrabold leading-[1.08] text-[#111827] tracking-tight mb-3 break-words">
-              <span className="text-[26px] sm:text-[56px]">Connecting Plot Owners <br /> With</span> <span className="text-[#FF2D3F] text-[26px] sm:text-[56px]">Serious Buyers</span><br /> 
+              <span className="text-[26px] sm:text-[56px]">Connecting Plot Owners <br />With</span> <span className="text-[#FF2D3F] text-[26px] sm:text-[56px]">Serious Buyers</span><br /> 
             </h1>
 
             {/* Subheading */}
@@ -93,7 +93,7 @@ export default function Hero() {
             </div>
 
             {/* Trust points with Red Checks */}
-            <div className="flex flex-wrap items-center gap-5">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-5">
               {[
                 { text: 'Free Submission' },
                 { text: 'No Brokerage' },

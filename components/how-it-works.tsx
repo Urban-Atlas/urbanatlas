@@ -58,20 +58,20 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-14 bg-[#FFF8F8] w-full" id="how-it-works">
+    <section className="py-10 sm:py-14 bg-[#FFF8F8] w-full" id="how-it-works">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
         {/* Title */}
-        <h2 className="text-[24px] sm:text-[28px] lg:text-[32px] font-extrabold text-center text-[#111827] tracking-tight mb-10">
+        <h2 className="text-[24px] sm:text-[28px] lg:text-[32px] font-extrabold text-center text-[#111827] tracking-tight mb-8 sm:mb-10">
           How Urban Atlas <span className="text-[#FF2D3F]">Works</span>
         </h2>
 
         {/* Single large card containing all steps */}
-        <div className="bg-white border border-[#F3F4F6] rounded-[24px] p-5 sm:p-7 lg:p-10 shadow-[0px_4px_20px_rgba(0,0,0,0.02)] max-w-[1100px] mx-auto relative grid grid-cols-1 md:grid-cols-3 lg:flex lg:flex-row items-stretch lg:items-center justify-items-center lg:justify-between gap-1 md:gap-8 lg:gap-4">
+        <div className="bg-white border border-[#F3F4F6] rounded-[24px] p-4 sm:p-7 lg:p-10 shadow-[0px_4px_20px_rgba(0,0,0,0.02)] max-w-[1100px] mx-auto relative grid grid-cols-1 md:grid-cols-3 lg:flex lg:flex-row items-stretch lg:items-center justify-items-center lg:justify-between gap-4 md:gap-8 lg:gap-4">
           {steps.map(({ num, icon: Icon, title, desc }, i) => (
-            <div key={num} className="flex flex-col lg:flex-row items-stretch lg:items-center gap-1 lg:gap-8 flex-1 relative">
-              <div className="flex flex-row items-start gap-5">
+            <div key={num} className="flex flex-col lg:flex-row items-stretch lg:items-center gap-3 lg:gap-8 flex-1 relative">
+              <div className="flex flex-row items-start gap-4 sm:gap-5">
                 {/* Styled Icon inside custom round circle background */}
-                <div className="w-[60px] h-[60px] lg:w-[80px] lg:h-[80px] rounded-full bg-[#FFF1F3] flex items-center justify-center flex-shrink-0">
+                <div className="w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] rounded-full bg-[#FFF1F3] flex items-center justify-center flex-shrink-0">
                   <Icon className="w-6 h-6 lg:w-8 lg:h-8" />
                 </div>
 

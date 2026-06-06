@@ -82,13 +82,13 @@ const trustItems = [
 
 export default function TrustSection() {
   return (
-    <section className="py-10 lg:py-14 bg-white w-full" id="market-report">
+    <section className="py-8 sm:py-10 lg:py-14 bg-white w-full" id="market-report">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* LEFT — Market Report card */}
           <div className="lg:col-span-5">
             <motion.div
-              className="bg-white border border-[#FFF1F3] rounded-[20px] p-5 sm:p-6 lg:p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.03)] h-full flex flex-col md:flex-row justify-between items-center md:items-stretch gap-6"
+              className="bg-white border border-[#FFF1F3] rounded-[20px] p-4 sm:p-6 lg:p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.03)] h-full flex flex-col justify-between gap-5"
               whileHover={{ y: -4, boxShadow: '0px 10px 40px rgba(255,45,63,0.06)' }}
               transition={{ duration: 0.22 }}
             >
@@ -116,8 +116,8 @@ export default function TrustSection() {
                 </motion.a>
               </div>
 
-              <div className="w-full md:w-1/2 flex justify-center md:justify-end items-center relative min-h-[160px] sm:min-h-[200px]">
-                <div className="relative w-full max-w-[140px] sm:max-w-[180px] h-full min-h-[160px] sm:min-h-[220px]">
+              <div className="w-full md:w-1/2 flex justify-center md:justify-end items-center relative min-h-[140px] sm:min-h-[200px]">
+                <div className="relative w-full max-w-[120px] sm:max-w-[180px] h-full min-h-[140px] sm:min-h-[220px]">
                   <Image
                     src="/report_chart.png"
                     alt="Lucknow Plot Market Report"
@@ -132,8 +132,8 @@ export default function TrustSection() {
 
           {/* RIGHT — Why People Trust Urban Atlas */}
           <div className="lg:col-span-7">
-            <div className="bg-gradient-to-br from-white to-[#FFFDFD] border border-[#FFF1F3] rounded-[20px] p-5 sm:p-6 lg:p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.03)] h-full flex flex-col justify-between">
-              <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-5 mb-8">
+            <div className="bg-gradient-to-br from-white to-[#FFFDFD] border border-[#FFF1F3] rounded-[20px] p-4 sm:p-6 lg:p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.03)] h-full flex flex-col justify-between">
+              <div className="flex flex-row items-center gap-3 sm:gap-5 mb-5 sm:mb-8">
                 {/* Shield Icon in Circle */}
                 <div className="w-[50px] h-[50px] lg:w-[64px] lg:h-[64px] rounded-full bg-[#FFF1F3] flex items-center justify-center flex-shrink-0 border-2 border-[#FF2D3F]">
                   <svg className="w-5 h-5 lg:w-7 lg:h-7" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF2D3F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -155,16 +155,16 @@ export default function TrustSection() {
               </div>
 
               {/* Grid of features */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 {trustItems.map(({ icon: Icon, label }) => (
                   <div
                     key={label}
-                    className="flex items-center gap-3.5 bg-white border border-[#F3F4F6] rounded-[20px] p-4 min-h-[56px] shadow-[0px_4px_20px_rgba(0,0,0,0.01)] hover:border-[#FFF1F3] transition-all duration-200"
+                    className="flex items-center gap-2.5 sm:gap-3.5 bg-white border border-[#F3F4F6] rounded-[14px] sm:rounded-[20px] p-3 sm:p-4 min-h-[52px] shadow-[0px_4px_20px_rgba(0,0,0,0.01)] hover:border-[#FFF1F3] transition-all duration-200"
                   >
-                    <div className="w-9 h-9 rounded-xl bg-[#FFF1F3] flex items-center justify-center flex-shrink-0">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#FFF1F3] flex items-center justify-center flex-shrink-0">
                       <Icon />
                     </div>
-                    <span className="text-[13px] font-extrabold text-[#111827] leading-[1.3]">{label}</span>
+                    <span className="text-[12px] sm:text-[13px] font-extrabold text-[#111827] leading-[1.3]">{label}</span>
                   </div>
                 ))}
               </div>

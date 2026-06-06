@@ -38,9 +38,9 @@ const quickLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-[#F3F4F6] pt-12 lg:pt-16 pb-8 w-full" id="footer">
+    <footer className="bg-white border-t border-[#F3F4F6] pt-8 sm:pt-12 lg:pt-16 pb-6 sm:pb-8 w-full" id="footer">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10 mb-8 sm:mb-10">
           {/* LEFT COLUMN: Logo Stack */}
           <div className="flex flex-col items-start">
             <Logo className="mb-4" showTagline={true} />
@@ -66,7 +66,7 @@ export default function Footer() {
           </div>
 
           {/* RIGHT COLUMN: Contact Information */}
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-start col-span-2 sm:col-span-1">
             <h4 className="font-extrabold text-[15px] text-[#111827] uppercase tracking-wider mb-5">
               Contact Us
             </h4>

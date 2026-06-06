@@ -73,9 +73,9 @@ const mediaItems = [
 
 export default function MediaSection() {
   return (
-    <section className="py-10 lg:py-14 bg-[#FFF8F8] w-full" id="media">
+    <section className="py-8 sm:py-10 lg:py-14 bg-[#FFF8F8] w-full" id="media">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
           {/* LEFT COLUMN: Media description and Email bar (5 cols) */}
           <div className="lg:col-span-4 flex flex-col items-start">
             <h2 className="text-[24px] sm:text-[28px] lg:text-[32px] font-extrabold text-[#111827] tracking-tight mb-4">
@@ -105,7 +105,7 @@ export default function MediaSection() {
 
           {/* CENTER COLUMN: Horizontal list of 5 icons (4 cols) */}
           <div className="lg:col-span-5 flex justify-center items-center">
-            <div className="grid grid-cols-3 gap-4 sm:flex sm:flex-row sm:flex-wrap sm:gap-6 lg:flex-nowrap lg:gap-2 items-start justify-center lg:justify-between w-full">
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 items-start justify-center w-full">
               {mediaItems.map(({ icon: Icon, label }) => (
                 <div
                   key={label}

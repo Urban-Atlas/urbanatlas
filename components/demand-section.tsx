@@ -59,26 +59,26 @@ const demands = [
 
 export default function DemandSection() {
   return (
-    <section className="py-12 bg-white w-full" id="demand">
+    <section className="py-8 sm:py-12 bg-white w-full" id="demand">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
         {/* Title */}
         <h2 className="text-[24px] sm:text-[28px] lg:text-[32px] font-extrabold text-center text-[#111827] tracking-tight mb-8">
           High <span className="text-[#FF2D3F]">Demand</span> For
         </h2>
 
-        {/* 4 Pink rounded cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-center gap-2 lg:gap-6 max-w-5xl mx-auto mb-6">
+        {/* 4 Pink rounded cards — 2 cols on mobile, 4 on desktop */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3 lg:gap-6 max-w-5xl mx-auto mb-6">
           {demands.map(({ icon: Icon, label }) => (
             <motion.div
               key={label}
-              className="bg-[#FFF1F3] rounded-[16px] px-4 py-3.5 sm:px-5 sm:py-4 flex items-center justify-start gap-4 cursor-default border border-[#FFE4E8] shadow-[0px_4px_20px_rgba(0,0,0,0.01)]"
+              className="bg-[#FFF1F3] rounded-[14px] sm:rounded-[16px] px-3 py-3 sm:px-5 sm:py-4 flex items-center justify-start gap-3 sm:gap-4 cursor-default border border-[#FFE4E8] shadow-[0px_4px_20px_rgba(0,0,0,0.01)]"
               whileHover={{ y: -3, boxShadow: '0px 10px 40px rgba(255,45,63,0.06)' }}
               transition={{ duration: 0.2 }}
             >
               <div className="flex-shrink-0">
                 <Icon />
               </div>
-              <span className="text-[13px] font-extrabold text-[#111827] text-left leading-tight">
+              <span className="text-[12px] sm:text-[13px] font-extrabold text-[#111827] text-left leading-tight">
                 {label.includes(' - ') ? (
                   <>
                     {label.split(' - ')[0]} - {label.split(' - ')[1].split(' ')[0]}<br />
