@@ -33,49 +33,6 @@ function RedCheckIcon({ className }: { className?: string }) {
   )
 }
 
-// Statistics Card Icons
-function DocumentIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="#FF2D3F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-      <polyline points="14 2 14 8 20 8" />
-      <line x1="16" y1="13" x2="8" y2="13" />
-      <line x1="16" y1="17" x2="8" y2="17" />
-      <polyline points="10 9 9 9 8 9" />
-    </svg>
-  )
-}
-
-function UsersIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="#FF2D3F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-      <circle cx="9" cy="7" r="4" />
-      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-    </svg>
-  )
-}
-
-function PinIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="#FF2D3F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-      <circle cx="12" cy="10" r="3" />
-    </svg>
-  )
-}
-
-function ChartIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="#FF2D3F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <line x1="18" y1="20" x2="18" y2="10" />
-      <line x1="12" y1="20" x2="12" y2="4" />
-      <line x1="6" y1="20" x2="6" y2="14" />
-    </svg>
-  )
-}
-
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-white pt-8 pb-10">
@@ -104,7 +61,7 @@ export default function Hero() {
             </div>
 
             {/* Typography Matched Heading */}
-            <h1 className="text-[30px] sm:text-[48px] md:text-[56px] font-extrabold leading-[1.08] text-[#111827] tracking-tight mb-3">
+            <h1 className="text-[30px] sm:text-[48px] md:text-[56px] font-extrabold leading-[1.08] text-[#111827] tracking-tight mb-3 break-words">
               <span className="text-[26px] sm:text-[56px]">Connecting Plot Owners <br /> With</span> <span className="text-[#FF2D3F] text-[26px] sm:text-[56px]">Serious Buyers</span><br /> 
             </h1>
 
@@ -117,7 +74,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-[14px] w-full sm:w-auto mb-5">
               <MotionLink
                 href="/submit-plot"
-                className="inline-flex items-center justify-center gap-2.5 bg-[#FF2D3F] hover:bg-[#E81F34] text-white rounded-[14px] px-8 py-4 font-extrabold text-[15px] transition-all duration-200 premium-shadow"
+                className="inline-flex min-h-[52px] w-full sm:w-auto items-center justify-center gap-2.5 bg-[#FF2D3F] hover:bg-[#E81F34] text-white rounded-[14px] px-8 py-4 font-extrabold text-[15px] transition-all duration-200 premium-shadow"
                 whileHover={{ y: -2 }}
                 whileTap={{ y: 0 }}
               >
@@ -126,7 +83,7 @@ export default function Hero() {
               </MotionLink>
               <MotionLink
                 href="/buyer-circle"
-                className="inline-flex items-center justify-center gap-2 border-2 border-gray-200 text-[#111827] bg-white rounded-[14px] px-8 py-4 font-bold text-[15px] hover:border-gray-300 transition-all duration-200"
+                className="inline-flex min-h-[52px] w-full sm:w-auto items-center justify-center gap-2 border-2 border-gray-200 text-[#111827] bg-white rounded-[14px] px-8 py-4 font-bold text-[15px] hover:border-gray-300 transition-all duration-200"
                 whileHover={{ y: -2 }}
                 whileTap={{ y: 0 }}
               >
@@ -148,10 +105,22 @@ export default function Hero() {
                 </div>
               ))}
             </div>
+
+            <div className="mt-5 flex w-full items-center justify-between gap-3 rounded-2xl border border-[#F3F4F6] bg-[#FFFDFD] p-4 lg:hidden">
+              <div className="flex items-center gap-2">
+                <div className="h-2 w-2 rounded-full bg-[#25D366] animate-pulse" />
+                <span className="text-xs font-extrabold text-[#111827]">Lucknow Live</span>
+              </div>
+              <div className="flex flex-wrap justify-end items-center gap-2 text-[11px] font-bold text-[#6B7280]">
+                <span><span className="text-[#FF2D3F]">6+</span> Localities</span>
+                <span><span className="text-[#FF2D3F]">200+</span> Plots</span>
+                <span><span className="text-[#FF2D3F]">500+</span> Buyers</span>
+              </div>
+            </div>
           </div>
 
           {/* Mobile/Tablet Image - Inline */}
-          <div className="w-full md:w-[40%] lg:hidden mt-8 md:mt-0 flex-shrink-0">
+          <div className="hidden md:block w-full md:w-[40%] lg:hidden mt-8 md:mt-0 flex-shrink-0">
             <div className="relative w-full h-[250px] sm:h-[350px] md:h-[300px] max-w-sm md:max-w-md mx-auto">
               <Image
                 src="/hero-left.png"

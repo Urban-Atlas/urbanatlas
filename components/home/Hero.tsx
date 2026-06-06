@@ -31,7 +31,7 @@ export default function Hero() {
     <section
       id="inventory"
       ref={containerRef}
-      className="bg-white pt-20 pb-12 flex items-center overflow-x-hidden font-jakarta"
+      className="bg-white pt-16 pb-8 lg:pt-20 lg:pb-12 flex items-center overflow-x-hidden font-jakarta"
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         {/* Left Column: Text & CTAs */}
@@ -42,7 +42,7 @@ export default function Hero() {
           </div>
 
           {/* Heading */}
-          <h1 className="heading-xl text-[#222222]">
+          <h1 className="heading-xl text-[28px] leading-[1.25] lg:text-5xl break-words text-[#222222]">
             {words.map((word, idx) => (
               <span key={idx} className="inline-block mr-2.5 overflow-hidden">
                 <span className="hero-word inline-block origin-top-left">
@@ -61,28 +61,28 @@ export default function Hero() {
             <p>
               Navigate Lucknow&apos;s residential resale market with confidence. We track, clean, and verify plot data directly from Lucknow Development Authority (LDA) allotments and structured Awas Vikas colonies to ensure authentic listings.
             </p>
-            <p>
+            <p className="hidden sm:block">
               Avoid duplicate listings, artificial price hikes, and land disputes. Access our off-market list and get reliable data signals to secure clear-title residential plots.
             </p>
           </div>
 
           {/* CTAs */}
-          <div className="hero-ctas flex flex-wrap items-center gap-4">
-            <TallyModalTrigger className="bg-[#FF385C] hover:bg-[#E31C5F] text-white font-semibold text-[0.9375rem] px-6 py-3.5 rounded-xl transition-all duration-200 hover:shadow-md hover:-translate-y-px flex items-center gap-2 cursor-pointer">
+          <div className="hero-ctas flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+            <TallyModalTrigger className="bg-[#FF385C] hover:bg-[#E31C5F] text-white font-semibold text-[0.9375rem] px-6 py-3.5 rounded-xl transition-all duration-200 hover:shadow-md hover:-translate-y-px flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto">
               Request Verified Inventory <span className="text-sm">→</span>
             </TallyModalTrigger>
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] hover:bg-[#1DA851] text-white font-semibold text-[0.9375rem] px-6 py-3.5 rounded-xl transition-all duration-200 hover:shadow-md hover:-translate-y-px flex items-center gap-2"
+              className="bg-[#25D366] hover:bg-[#1DA851] text-white font-semibold text-[0.9375rem] px-6 py-3.5 rounded-xl transition-all duration-200 hover:shadow-md hover:-translate-y-px flex items-center justify-center gap-2 w-full sm:w-auto"
             >
               🟢 Join WhatsApp Community
             </a>
           </div>
 
           {/* Feature Badges */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-1.5 sm:gap-2 [&>span:nth-child(n+4)]:hidden sm:[&>span:nth-child(n+4)]:inline-flex">
             {[
               "Verified Resale Inventory",
               "LDA & Awas Vikas Focused",
@@ -101,21 +101,33 @@ export default function Hero() {
           </div>
 
           {/* Stats Row */}
-          <div className="hero-stats grid grid-cols-3 gap-5 pt-5 border-t border-[#EBEBEB]">
+          <div className="flex lg:hidden bg-[#F7F7F7] border border-[#EBEBEB] rounded-2xl p-4 items-center justify-between gap-4">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
+              <span className="text-xs font-bold text-[#222222]">Lucknow Live</span>
+            </div>
+            <div className="flex flex-wrap justify-end items-center gap-2 sm:gap-3 text-xs font-semibold text-[#6A6A6A]">
+              <span><span className="text-[#FF385C] font-extrabold">6+</span> Localities</span>
+              <span><span className="text-[#FF385C] font-extrabold">200+</span> Plots</span>
+              <span><span className="text-[#FF385C] font-extrabold">500+</span> Buyers</span>
+            </div>
+          </div>
+
+          <div className="hero-stats grid grid-cols-3 gap-3 sm:gap-5 pt-5 border-t border-[#EBEBEB]">
             <div>
-              <div className="text-3xl md:text-4xl font-extrabold text-[#222222]">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#222222]">
                 <AnimatedCounter end={6} suffix="+" />
               </div>
               <div className="text-xs text-[#6A6A6A] font-medium mt-1">Active Localities</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-extrabold text-[#222222]">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#222222]">
                 <AnimatedCounter end={200} suffix="+" />
               </div>
               <div className="text-xs text-[#6A6A6A] font-medium mt-1">Verified Plots</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-extrabold text-[#222222]">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#222222]">
                 <AnimatedCounter end={500} suffix="+" />
               </div>
               <div className="text-xs text-[#6A6A6A] font-medium mt-1">Buyers Network</div>
@@ -124,7 +136,7 @@ export default function Hero() {
         </div>
 
         {/* Right Column: Visual Card Map */}
-        <div className="lg:col-span-5 flex flex-col justify-center">
+        <div className="lg:col-span-5 hidden lg:flex flex-col justify-center">
           <div className="hero-right-card bg-[#F7F7F7] border border-[#EBEBEB] p-6 rounded-3xl shadow-md w-full relative">
             <div className="flex items-center justify-between mb-4">
               <span className="text-xs font-bold text-[#222222] uppercase tracking-wider flex items-center gap-1.5">

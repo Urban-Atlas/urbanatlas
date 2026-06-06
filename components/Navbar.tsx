@@ -72,7 +72,7 @@ export default function Navbar() {
         {/* Mobile menu trigger */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden p-2 rounded-xl hover:bg-gray-50 text-[#111827]"
+          className="lg:hidden p-2.5 rounded-xl hover:bg-gray-50 text-[#111827]"
           aria-label="Toggle menu"
         >
           {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -81,14 +81,17 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 px-6 py-5 flex flex-col gap-4 absolute top-20 left-0 w-full shadow-lg">
-          <nav className="flex flex-col gap-2">
+        <div
+          className="lg:hidden bg-white border-t border-gray-100 px-6 py-5 flex flex-col absolute top-20 left-0 w-full max-h-screen overflow-y-auto shadow-lg"
+          style={{ paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 24px)' }}
+        >
+          <nav className="flex flex-col">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="flex items-center gap-2.5 text-base font-semibold text-[#4B5563] py-2.5 border-b border-gray-50 hover:text-[#FF2D3F] transition-colors"
+                className="flex w-full items-center gap-2.5 text-[15px] tracking-tight font-semibold text-[#4B5563] py-3 border-b border-[#F3F4F6] hover:text-[#FF2D3F] transition-colors"
               >
                 {link.whatsapp && (
                   <WhatsAppIcon className="h-5 w-5 text-[#25D366]" />
@@ -100,7 +103,7 @@ export default function Navbar() {
           <Link
             href="/submit-plot"
             onClick={() => setMobileOpen(false)}
-            className="flex items-center justify-center bg-[#FF2D3F] hover:bg-[#E81F34] text-white rounded-[14px] py-3.5 text-base font-bold transition-all"
+            className="mt-2 flex min-h-[52px] items-center justify-center bg-[#FF2D3F] hover:bg-[#E81F34] text-white rounded-[14px] py-3.5 text-base font-bold transition-all"
           >
             Submit Plot
           </Link>

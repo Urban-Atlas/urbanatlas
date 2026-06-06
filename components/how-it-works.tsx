@@ -1,11 +1,9 @@
 'use client'
 
-import { motion } from 'framer-motion'
-
 // Custom matching SVG Icons for the 3 steps
-function StepIcon1() {
+function StepIcon1({ className }: { className?: string }) {
   return (
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF2D3F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg className={className} width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF2D3F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
       <polyline points="14 2 14 8 20 8" />
       <line x1="16" y1="13" x2="8" y2="13" />
@@ -15,9 +13,9 @@ function StepIcon1() {
   )
 }
 
-function StepIcon2() {
+function StepIcon2({ className }: { className?: string }) {
   return (
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF2D3F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg className={className} width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF2D3F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="11" cy="11" r="8" />
       <line x1="21" y1="21" x2="16.65" y2="16.65" />
       <line x1="11" y1="8" x2="11" y2="14" />
@@ -26,9 +24,9 @@ function StepIcon2() {
   )
 }
 
-function StepIcon3() {
+function StepIcon3({ className }: { className?: string }) {
   return (
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF2D3F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg className={className} width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF2D3F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
       <circle cx="9" cy="7" r="4" />
       <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
@@ -63,18 +61,18 @@ export default function HowItWorks() {
     <section className="py-14 bg-[#FFF8F8] w-full" id="how-it-works">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
         {/* Title */}
-        <h2 className="text-[32px] font-extrabold text-center text-[#111827] tracking-tight mb-10">
+        <h2 className="text-[24px] sm:text-[28px] lg:text-[32px] font-extrabold text-center text-[#111827] tracking-tight mb-10">
           How Urban Atlas <span className="text-[#FF2D3F]">Works</span>
         </h2>
 
         {/* Single large card containing all steps */}
-        <div className="bg-white border border-[#F3F4F6] rounded-[24px] p-7 lg:p-10 shadow-[0px_4px_20px_rgba(0,0,0,0.02)] max-w-[1100px] mx-auto relative grid grid-cols-1 md:grid-cols-3 lg:flex lg:flex-row items-stretch lg:items-center justify-items-center lg:justify-between gap-8 lg:gap-4">
+        <div className="bg-white border border-[#F3F4F6] rounded-[24px] p-5 sm:p-7 lg:p-10 shadow-[0px_4px_20px_rgba(0,0,0,0.02)] max-w-[1100px] mx-auto relative grid grid-cols-1 md:grid-cols-3 lg:flex lg:flex-row items-stretch lg:items-center justify-items-center lg:justify-between gap-1 md:gap-8 lg:gap-4">
           {steps.map(({ num, icon: Icon, title, desc }, i) => (
-            <div key={num} className="flex items-center gap-4 lg:gap-8 flex-1 relative">
+            <div key={num} className="flex flex-col lg:flex-row items-stretch lg:items-center gap-1 lg:gap-8 flex-1 relative">
               <div className="flex flex-row items-start gap-5">
                 {/* Styled Icon inside custom round circle background */}
-                <div className="w-[80px] h-[80px] rounded-full bg-[#FFF1F3] flex items-center justify-center flex-shrink-0">
-                  <Icon />
+                <div className="w-[60px] h-[60px] lg:w-[80px] lg:h-[80px] rounded-full bg-[#FFF1F3] flex items-center justify-center flex-shrink-0">
+                  <Icon className="w-6 h-6 lg:w-8 lg:h-8" />
                 </div>
 
                 {/* Text Content */}
@@ -86,9 +84,15 @@ export default function HowItWorks() {
                   {/* Step Header */}
                   <h3 className="text-[18px] font-extrabold text-[#111827] mb-1.5">{title}</h3>
                   {/* Step Description */}
-                  <p className="text-[13px] font-medium text-[#6B7280] leading-[1.5] max-w-[160px]">{desc}</p>
+                  <p className="text-[13px] font-medium text-[#6B7280] leading-[1.5] max-w-none lg:max-w-[160px]">{desc}</p>
                 </div>
               </div>
+
+              {i < 2 && (
+                <div className="lg:hidden flex justify-center pl-10 my-1">
+                  <div className="w-px h-6 border-l-2 border-dashed border-[#FF2D3F]/40" />
+                </div>
+              )}
 
               {/* Red dotted arrow connector (desktop only, between steps) */}
               {i < 2 && (

@@ -130,3 +130,45 @@ h2 {
 .outline-btn:hover {
   border-color: var(--text-primary);
 }
+
+/* ================================
+   Mobile Production Polish
+   ================================ */
+
+/* Prevent horizontal overflow on mobile */
+@media (max-width: 1023px) {
+  html, body {
+    overflow-x: hidden;
+  }
+}
+
+/* iOS tap highlight removal for buttons/links */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Minimum touch target enforcement */
+@media (max-width: 1023px) {
+  button, [role="button"], a[class*="rounded"] {
+    min-height: 44px;
+  }
+}
+
+/* Safe area support for fixed navbar */
+nav.fixed {
+  padding-top: max(1rem, env(safe-area-inset-top));
+}
+
+/* Smooth momentum scroll on mobile */
+@media (max-width: 1023px) {
+  section {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Font rendering optimization on mobile */
+@media (max-width: 1023px) {
+  body {
+    text-rendering: optimizeSpeed;
+  }
+}

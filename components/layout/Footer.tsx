@@ -5,8 +5,8 @@ import { MapPin, MessageSquare, Mail, Phone } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="bg-[#F7F7F7] border-t border-[#EBEBEB] py-12 px-6 md:px-10 font-jakarta">
-      <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="bg-[#F7F7F7] border-t border-[#EBEBEB] py-12 lg:py-16 px-4 lg:px-10 font-jakarta">
+      <div className="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Column 1: Brand */}
         <div className="flex flex-col gap-4">
           <Link href="/" className="flex items-center gap-2 group w-fit">
@@ -20,7 +20,7 @@ export default function Footer() {
             </div>
           </Link>
           <p className="text-[#6A6A6A] text-sm leading-relaxed max-w-xs">
-            Lucknow's premier residential plot intelligence platform. We map, verify, and monitor resale inventories across top localities.
+            Lucknow&apos;s premier residential plot intelligence platform. We map, verify, and monitor resale inventories across top localities.
           </p>
           {/* Social Icons */}
           <div className="flex items-center gap-4 mt-2">
@@ -28,7 +28,7 @@ export default function Footer() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#6A6A6A] hover:text-[#25D366] transition-colors"
+              className="text-[#6A6A6A] hover:text-[#25D366] transition-colors min-h-[44px] min-w-[44px] inline-flex items-center justify-center"
               aria-label="WhatsApp"
             >
               <MessageSquare className="w-5 h-5" />
@@ -37,7 +37,7 @@ export default function Footer() {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#6A6A6A] hover:text-[#FF385C] transition-colors"
+              className="text-[#6A6A6A] hover:text-[#FF385C] transition-colors min-h-[44px] min-w-[44px] inline-flex items-center justify-center"
               aria-label="Instagram"
             >
               <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +48,7 @@ export default function Footer() {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#6A6A6A] hover:text-[#0A66C2] transition-colors"
+              className="text-[#6A6A6A] hover:text-[#0A66C2] transition-colors min-h-[44px] min-w-[44px] inline-flex items-center justify-center"
               aria-label="LinkedIn"
             >
               <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -114,7 +114,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/admin/login" className="text-xs text-[#9A9A9A] hover:text-[#222222] transition-colors">
+              <Link href="/admin/login" className="text-[13px] text-[#9A9A9A] hover:text-[#222222] transition-colors">
                 Admin Panel
               </Link>
             </li>
@@ -149,7 +149,7 @@ export default function Footer() {
 
       <div className="max-w-[1400px] mx-auto h-px bg-[#EBEBEB] my-8" />
 
-      <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#9A9A9A]">
+      <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px] text-[#9A9A9A] text-center sm:text-left">
         <div>
           © {new Date().getFullYear()} Urban Atlas. All rights reserved.
         </div>

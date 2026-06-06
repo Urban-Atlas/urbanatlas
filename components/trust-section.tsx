@@ -82,13 +82,13 @@ const trustItems = [
 
 export default function TrustSection() {
   return (
-    <section className="py-14 bg-white w-full" id="market-report">
+    <section className="py-10 lg:py-14 bg-white w-full" id="market-report">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* LEFT — Market Report card */}
           <div className="lg:col-span-5">
             <motion.div
-              className="bg-white border border-[#FFF1F3] rounded-[20px] p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.03)] h-full flex flex-col md:flex-row justify-between items-center md:items-stretch gap-6"
+              className="bg-white border border-[#FFF1F3] rounded-[20px] p-5 sm:p-6 lg:p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.03)] h-full flex flex-col md:flex-row justify-between items-center md:items-stretch gap-6"
               whileHover={{ y: -4, boxShadow: '0px 10px 40px rgba(255,45,63,0.06)' }}
               transition={{ duration: 0.22 }}
             >
@@ -97,7 +97,7 @@ export default function TrustSection() {
                   <span className="text-[#FF2D3F] text-[12px] font-extrabold uppercase tracking-wider mb-2 bg-[#FFF1F3] px-3 py-1.5 rounded-full inline-block">
                     Market Report
                   </span>
-                  <h3 className="text-[28px] font-extrabold text-[#111827] mb-3 leading-tight mt-2">
+                  <h3 className="text-[22px] sm:text-[24px] lg:text-[28px] font-extrabold text-[#111827] mb-3 leading-tight mt-2">
                     Lucknow Plot Market Report
                   </h3>
                   <p className="text-[14px] font-semibold text-[#4B5563] leading-[1.6] mb-6">
@@ -107,7 +107,7 @@ export default function TrustSection() {
                 {/* Download outlined button */}
                 <motion.a
                   href="#market-report-download"
-                  className="inline-flex items-center justify-center gap-2 border-2 border-[#FF2D3F] text-[#FF2D3F] hover:bg-[#FF2D3F] hover:text-white rounded-[14px] px-5 py-2.5 text-[13px] font-extrabold transition-all duration-200 self-start whitespace-nowrap"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-[#FF2D3F] text-[#FF2D3F] hover:bg-[#FF2D3F] hover:text-white rounded-[14px] px-5 py-2.5 text-[13px] font-extrabold transition-all duration-200 self-start whitespace-nowrap w-full sm:w-auto min-h-[48px]"
                   whileHover={{ y: -2 }}
                   whileTap={{ y: 0 }}
                 >
@@ -116,8 +116,8 @@ export default function TrustSection() {
                 </motion.a>
               </div>
 
-              <div className="w-full md:w-1/2 flex justify-center md:justify-end items-center relative min-h-[200px]">
-                <div className="relative w-full max-w-[180px] h-full min-h-[220px]">
+              <div className="w-full md:w-1/2 flex justify-center md:justify-end items-center relative min-h-[160px] sm:min-h-[200px]">
+                <div className="relative w-full max-w-[140px] sm:max-w-[180px] h-full min-h-[160px] sm:min-h-[220px]">
                   <Image
                     src="/report_chart.png"
                     alt="Lucknow Plot Market Report"
@@ -132,17 +132,17 @@ export default function TrustSection() {
 
           {/* RIGHT — Why People Trust Urban Atlas */}
           <div className="lg:col-span-7">
-            <div className="bg-gradient-to-br from-white to-[#FFFDFD] border border-[#FFF1F3] rounded-[20px] p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.03)] h-full flex flex-col justify-between">
-              <div className="flex flex-row items-start gap-5 mb-8">
+            <div className="bg-gradient-to-br from-white to-[#FFFDFD] border border-[#FFF1F3] rounded-[20px] p-5 sm:p-6 lg:p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.03)] h-full flex flex-col justify-between">
+              <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-5 mb-8">
                 {/* Shield Icon in Circle */}
-                <div className="w-[64px] h-[64px] rounded-full bg-[#FFF1F3] flex items-center justify-center flex-shrink-0 border-2 border-[#FF2D3F]">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF2D3F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <div className="w-[50px] h-[50px] lg:w-[64px] lg:h-[64px] rounded-full bg-[#FFF1F3] flex items-center justify-center flex-shrink-0 border-2 border-[#FF2D3F]">
+                  <svg className="w-5 h-5 lg:w-7 lg:h-7" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF2D3F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                     <polyline points="9 11 11 13 15 9" />
                   </svg>
                 </div>
                 <div className="flex flex-col">
-                  <h3 className="text-[28px] font-extrabold text-[#111827] mb-1.5 leading-tight">
+                  <h3 className="text-[22px] sm:text-[24px] lg:text-[28px] font-extrabold text-[#111827] mb-1.5 leading-tight">
                     Why People Trust Urban Atlas
                   </h3>
                   <p className="text-[13px] font-black text-[#FF2D3F] uppercase tracking-wider mb-2">
@@ -159,7 +159,7 @@ export default function TrustSection() {
                 {trustItems.map(({ icon: Icon, label }) => (
                   <div
                     key={label}
-                    className="flex items-center gap-3.5 bg-white border border-[#F3F4F6] rounded-[20px] p-4.5 px-5 shadow-[0px_4px_20px_rgba(0,0,0,0.01)] hover:border-[#FFF1F3] transition-all duration-200"
+                    className="flex items-center gap-3.5 bg-white border border-[#F3F4F6] rounded-[20px] p-4 min-h-[56px] shadow-[0px_4px_20px_rgba(0,0,0,0.01)] hover:border-[#FFF1F3] transition-all duration-200"
                   >
                     <div className="w-9 h-9 rounded-xl bg-[#FFF1F3] flex items-center justify-center flex-shrink-0">
                       <Icon />

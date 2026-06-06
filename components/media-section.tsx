@@ -63,39 +63,6 @@ function EnvelopeIcon() {
   )
 }
 
-// Circular detailed handshake vector SVG for For Brokers
-function HandshakeCircularSVG() {
-  return (
-    <div className="w-[100px] h-[100px] rounded-full bg-[#FFF1F3] flex items-center justify-center flex-shrink-0 select-none">
-      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {/* Two hands shaking */}
-        <path
-          d="M12 36 C12 36 17 28 26 25 L38 21"
-          stroke="#FF2D3F"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M48 36 C48 36 43 28 34 25 L22 21"
-          stroke="#FF2D3F"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M26 25 C26 25 30 29 34 25"
-          stroke="#FF2D3F"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-        />
-        {/* Red fingers overlay */}
-        <circle cx="30" cy="25" r="2" fill="#FF2D3F" />
-      </svg>
-    </div>
-  )
-}
-
 const mediaItems = [
   { icon: TrendIcon1, label: 'Locality Trends' },
   { icon: TrendIcon2, label: 'Plot Price Movement' },
@@ -106,12 +73,12 @@ const mediaItems = [
 
 export default function MediaSection() {
   return (
-    <section className="py-14 bg-[#FFF8F8] w-full" id="media">
+    <section className="py-10 lg:py-14 bg-[#FFF8F8] w-full" id="media">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
           {/* LEFT COLUMN: Media description and Email bar (5 cols) */}
           <div className="lg:col-span-4 flex flex-col items-start">
-            <h2 className="text-[32px] font-extrabold text-[#111827] tracking-tight mb-4">
+            <h2 className="text-[24px] sm:text-[28px] lg:text-[32px] font-extrabold text-[#111827] tracking-tight mb-4">
               Media &amp; Research
             </h2>
             <p className="text-[14px] font-bold text-[#4B5563] leading-[1.6] mb-4">
@@ -122,7 +89,7 @@ export default function MediaSection() {
             </p>
 
             {/* Structured Grey Border Email Bar */}
-            <div className="flex items-center gap-3 border border-gray-200 rounded-[14px] bg-white p-3.5 px-4.5 w-full">
+            <div className="flex items-center gap-3 border border-gray-200 rounded-[14px] bg-white p-3.5 px-4 w-full">
               <EnvelopeIcon />
               <div className="text-[13px] font-bold text-[#4B5563]">
                 For media enquiries:{' '}
@@ -138,7 +105,7 @@ export default function MediaSection() {
 
           {/* CENTER COLUMN: Horizontal list of 5 icons (4 cols) */}
           <div className="lg:col-span-5 flex justify-center items-center">
-            <div className="flex flex-row flex-wrap lg:flex-nowrap items-start justify-center lg:justify-between w-full gap-4 sm:gap-6 lg:gap-2">
+            <div className="grid grid-cols-3 gap-4 sm:flex sm:flex-row sm:flex-wrap sm:gap-6 lg:flex-nowrap lg:gap-2 items-start justify-center lg:justify-between w-full">
               {mediaItems.map(({ icon: Icon, label }) => (
                 <div
                   key={label}
@@ -158,7 +125,7 @@ export default function MediaSection() {
           {/* RIGHT COLUMN: For Brokers card (3 cols) */}
           <div className="lg:col-span-3">
             <motion.div
-              className="bg-white border border-[#FFF1F3] rounded-[20px] p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.03)] flex flex-col justify-between items-start min-h-[330px]"
+              className="bg-white border border-[#FFF1F3] rounded-[20px] p-5 sm:p-6 lg:p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.03)] flex flex-col justify-between items-start min-h-0 lg:min-h-[330px]"
               whileHover={{ y: -4, boxShadow: '0px 10px 40px rgba(255,45,63,0.06)' }}
               transition={{ duration: 0.22 }}
             >
@@ -172,7 +139,7 @@ export default function MediaSection() {
                 <div className="w-full flex justify-center py-2">
                   {/* <HandshakeCircularSVG /> */}
 
-                  <div className="relative w-[140px] h-[140px]">
+                  <div className="relative w-[110px] h-[110px] sm:w-[140px] sm:h-[140px]">
                     <Image
                       src="/handshake.png"
                       alt="Handshake"
@@ -186,7 +153,7 @@ export default function MediaSection() {
 
               <MotionLink
                 href="/channel-partners"
-                className="mt-4 self-center inline-flex items-center justify-center gap-2 border-2 border-[#FF2D3F] text-[#FF2D3F] hover:bg-[#FF2D3F] hover:text-white rounded-[14px] px-[22px] py-[11px] text-[13px] font-extrabold transition-all duration-200"
+                className="mt-4 self-center inline-flex items-center justify-center gap-2 border-2 border-[#FF2D3F] text-[#FF2D3F] hover:bg-[#FF2D3F] hover:text-white rounded-[14px] px-[22px] py-[11px] text-[13px] font-extrabold transition-all duration-200 w-full sm:w-auto min-h-[48px]"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

@@ -1,14 +1,16 @@
 'use client'
 import { useState } from 'react'
-import { Professional, PROFESSIONALS } from '@/lib/professionals-data'
+import { PROFESSIONALS } from '@/lib/professionals-data'
 import { WHATSAPP_URL } from '@/lib/config'
 import TallyModalTrigger from '../shared/TallyModalTrigger'
 import { ShieldCheck, UserCheck, Briefcase, MapPin } from 'lucide-react'
 
 export default function ProfessionalsDirectory() {
-  const [activeCategory, setActiveCategory] = useState<'all' | 'architect' | 'lawyer' | 'contractor' | 'surveyor'>('all')
+  type Category = 'all' | 'architect' | 'lawyer' | 'contractor' | 'surveyor'
 
-  const categories = [
+  const [activeCategory, setActiveCategory] = useState<Category>('all')
+
+  const categories: Array<{ value: Category; label: string }> = [
     { value: 'all', label: 'All' },
     { value: 'architect', label: 'Architects' },
     { value: 'lawyer', label: 'Lawyers' },
@@ -37,7 +39,7 @@ export default function ProfessionalsDirectory() {
         {categories.map((cat) => (
           <button
             key={cat.value}
-            onClick={() => setActiveCategory(cat.value as any)}
+            onClick={() => setActiveCategory(cat.value)}
             className={`px-5 py-2.5 rounded-xl font-semibold text-xs transition-all duration-200 cursor-pointer ${
               activeCategory === cat.value
                 ? 'bg-[#FF385C] text-white shadow-xs'

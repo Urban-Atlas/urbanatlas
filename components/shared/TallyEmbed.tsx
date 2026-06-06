@@ -1,6 +1,11 @@
 'use client'
 import { useEffect } from 'react'
-import { TALLY_FORM_URL } from '@/lib/config'
+
+interface TallyWindow extends Window {
+  Tally?: {
+    loadEmbeds: () => void
+  }
+}
 
 interface Props {
   formId?: string       // default: '68MPZA'
@@ -21,8 +26,9 @@ export default function TallyEmbed({ formId = '68MPZA', width = '100%', classNam
       document.body.appendChild(script)
     } else {
       // If Tally already loaded, trigger re-scan
-      if (typeof (window as any).Tally !== 'undefined') {
-        (window as any).Tally.loadEmbeds()
+      const tallyWindow = window as TallyWindow
+      if (typeof tallyWindow.Tally !== 'undefined') {
+        tallyWindow.Tally.loadEmbeds()
       }
     }
   }, [])

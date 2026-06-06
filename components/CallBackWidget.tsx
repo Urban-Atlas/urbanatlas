@@ -79,8 +79,8 @@ export default function CallBackWidget() {
       setIsSuccess(true)
       setName('')
       setMobile('')
-    } catch (err: any) {
-      setSubmitError(err.message || 'Submission failed. Please try again.')
+    } catch (err: unknown) {
+      setSubmitError(err instanceof Error ? err.message : 'Submission failed. Please try again.')
     } finally {
       setIsSubmitting(false)
     }

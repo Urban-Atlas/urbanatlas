@@ -1,6 +1,5 @@
 'use client'
 import { useEffect } from 'react'
-import { TALLY_FORM_URL } from '@/lib/config'
 
 interface Props {
   children: React.ReactNode

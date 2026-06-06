@@ -1,6 +1,6 @@
 'use client'
 import { useRef, useEffect, type ReactNode } from 'react'
-import { gsap, ScrollTrigger } from '@/lib/gsap'
+import { gsap } from '@/lib/gsap'
 
 type Direction = 'up' | 'down' | 'left' | 'right' | 'fade'
 

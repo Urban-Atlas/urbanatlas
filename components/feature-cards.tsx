@@ -26,7 +26,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 // 1. Isometric Wireframe House SVG
 function IsometricHouseSVG() {
   return (
-    <svg width="104" height="104" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute bottom-4 right-4 opacity-80 pointer-events-none select-none z-0">
+    <svg width="104" height="104" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="hidden sm:block absolute bottom-4 right-4 opacity-80 pointer-events-none select-none z-0">
       {/* Front Face Wireframe */}
       <path d="M20 75L60 95V55L20 35V75Z" stroke="#FF2D3F" strokeWidth="1.5" strokeLinejoin="round" />
       {/* Right Side Wireframe */}
@@ -50,7 +50,7 @@ function IsometricHouseSVG() {
 // 2. Translucent Isometric Valuation Sheets
 function IsometricSheetsSVG() {
   return (
-    <svg width="105" height="105" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute bottom-4 right-4 opacity-85 pointer-events-none select-none z-0">
+    <svg width="105" height="105" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="hidden sm:block absolute bottom-4 right-4 opacity-85 pointer-events-none select-none z-0">
       {/* Sheet 1 (Bottom Layer) */}
       <path d="M20 75 L60 95 L100 75 L60 55 Z" fill="rgba(124, 58, 237, 0.08)" stroke="rgba(124, 58, 237, 0.4)" strokeWidth="1.5" />
       {/* Sheet 2 (Middle Layer) */}
@@ -67,12 +67,12 @@ function IsometricSheetsSVG() {
 
 export default function FeatureCards() {
   return (
-    <section className="py-14 bg-[#FFFDFD] w-full" id="features">
+    <section className="py-10 lg:py-14 bg-[#FFFDFD] w-full" id="features">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_1.6fr_1fr] gap-6 items-stretch">
           {/* Card 1 — Sell Your Plot */}
           <motion.div
-            className="relative bg-gradient-to-b from-[#FFFDFD] to-[#FFF5F6] border border-[#FFF1F3] rounded-[20px] p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.03)] flex flex-col justify-start overflow-hidden min-h-[420px] h-full"
+            className="relative bg-gradient-to-b from-[#FFFDFD] to-[#FFF5F6] border border-[#FFF1F3] rounded-[20px] p-5 sm:p-6 lg:p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.03)] flex flex-col justify-start overflow-hidden min-h-0 lg:min-h-[420px] h-full"
             whileHover={{ y: -4, boxShadow: '0px 10px 40px rgba(255,45,63,0.06)' }}
             transition={{ duration: 0.22 }}
           >
@@ -80,7 +80,7 @@ export default function FeatureCards() {
               <span className="text-[#FF2D3F] text-[12px] font-extrabold uppercase tracking-wider mb-2 bg-[#FFF1F3] px-3 py-1.5 rounded-full">
                 Sell Your Plot
               </span>
-              <h3 className="text-[28px] font-extrabold text-[#111827] mb-6 leading-tight">
+              <h3 className="text-[22px] sm:text-[24px] lg:text-[28px] font-extrabold text-[#111827] mb-6 leading-tight">
                 Own a plot?
               </h3>
               <ul className="space-y-3.5 w-full">
@@ -98,10 +98,10 @@ export default function FeatureCards() {
               </ul>
             </div>
 
-            <div className="relative z-10 mt-[115px] ml-[-20px] flex flex-col items-start w-full pr-[60px]">
+            <div className="relative z-10 mt-8 lg:mt-[115px] ml-[-20px] flex flex-col items-start w-full pr-[60px]">
               <MotionLink
                 href="/submit-plot"
-                className="inline-flex items-center gap-2 bg-[#FF2D3F] hover:bg-[#E81F34] text-white rounded-[12px] px-5 py-2.5 text-[13px] font-extrabold transition-all duration-200 premium-shadow whitespace-nowrap"
+                className="inline-flex min-h-[48px] items-center gap-2 bg-[#FF2D3F] hover:bg-[#E81F34] text-white rounded-[12px] px-5 py-2.5 text-[13px] font-extrabold transition-all duration-200 premium-shadow whitespace-nowrap"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -116,7 +116,7 @@ export default function FeatureCards() {
 
           {/* Card 2 — Buyer Circle */}
           <motion.div
-            className="relative bg-gradient-to-b from-[#FDFFFD] to-[#F1FAF4] border border-[#E6F4EA] rounded-[20px] p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.03)] flex flex-col justify-start overflow-hidden min-h-[460px] h-full"
+            className="relative bg-gradient-to-b from-[#FDFFFD] to-[#F1FAF4] border border-[#E6F4EA] rounded-[20px] p-5 sm:p-6 lg:p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.03)] flex flex-col justify-start overflow-hidden min-h-0 lg:min-h-[460px] h-full"
             whileHover={{ y: -4, boxShadow: '0px 10px 40px rgba(37,211,102,0.06)' }}
             transition={{ duration: 0.22 }}
           >
@@ -124,7 +124,7 @@ export default function FeatureCards() {
               <span className="text-[#137333] text-[12px] font-extrabold uppercase tracking-wider mb-2 bg-[#E6F4EA] px-3 py-1.5 rounded-full">
                 Buyer Circle
               </span>
-              <h3 className="text-[28px] font-extrabold text-[#111827] mb-6 leading-tight">
+              <h3 className="text-[22px] sm:text-[24px] lg:text-[28px] font-extrabold text-[#111827] mb-6 leading-tight">
                 Join our Buyer Network
               </h3>
 
@@ -148,7 +148,7 @@ export default function FeatureCards() {
                   <div className="relative z-10 mt-[48px] flex flex-col items-start w-full">
                     <MotionLink
                       href="/buyer-circle"
-                      className="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-[12px] px-5 py-2.5 text-[13px] font-extrabold transition-all duration-200 premium-shadow"
+                      className="inline-flex min-h-[48px] items-center gap-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-[12px] px-5 py-2.5 text-[13px] font-extrabold transition-all duration-200 premium-shadow"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
@@ -159,7 +159,7 @@ export default function FeatureCards() {
                 </div>
 
                 {/* WhatsApp Phone Mockup exactly matching screenshot message requirements */}
-                <div className="rounded-[18px] bg-white border border-[#E0E0E0] shadow-sm flex flex-col overflow-hidden max-w-[180px] w-full mx-auto md:ml-auto">
+                <div className="hidden sm:flex rounded-[18px] bg-white border border-[#E0E0E0] shadow-sm flex-col overflow-hidden max-w-[180px] w-full mx-auto md:ml-auto">
                   {/* Phone Header */}
                   <div className="bg-[#075E54] text-white p-2 flex items-center gap-1.5 leading-none">
                     <div className="w-5 h-5 rounded-full bg-[#128C7E] flex items-center justify-center flex-shrink-0">
@@ -202,7 +202,7 @@ export default function FeatureCards() {
 
           {/* Card 3 — Free Valuation */}
           <motion.div
-            className="relative bg-gradient-to-b from-[#FCFDFD] to-[#F5F5FC] border border-[#ECECF9] rounded-[20px] p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.03)] flex flex-col justify-start overflow-hidden min-h-[460px] h-full"
+            className="relative bg-gradient-to-b from-[#FCFDFD] to-[#F5F5FC] border border-[#ECECF9] rounded-[20px] p-5 sm:p-6 lg:p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.03)] flex flex-col justify-start overflow-hidden min-h-0 lg:min-h-[460px] h-full"
             whileHover={{ y: -4, boxShadow: '0px 10px 40px rgba(124,58,237,0.06)' }}
             transition={{ duration: 0.22 }}
           >
@@ -210,7 +210,7 @@ export default function FeatureCards() {
               <span className="text-[#6D28D9] text-[12px] font-extrabold uppercase tracking-wider mb-2 bg-[#EDE9FE] px-3 py-1.5 rounded-full">
                 Free Valuation
               </span>
-              <h3 className="text-[28px] font-extrabold text-[#111827] mb-6 leading-tight">
+              <h3 className="text-[22px] sm:text-[24px] lg:text-[28px] font-extrabold text-[#111827] mb-6 leading-tight">
                 Not sure what your plot is worth?
               </h3>
               <ul className="space-y-3.5 w-full">
@@ -228,10 +228,10 @@ export default function FeatureCards() {
               </ul>
             </div>
 
-            <div className="relative z-10 mt-[70px] ml-[-10px] flex flex-col items-start w-full pr-[80px]">
+            <div className="relative z-10 mt-6 lg:mt-[70px] ml-[-10px] flex flex-col items-start w-full pr-[80px]">
               <MotionLink
                 href="/valuation"
-                className="inline-flex items-center gap-2 bg-[#7C3AED] hover:bg-[#6D28D9] text-white rounded-[12px] px-5 py-2.5 text-[13px] font-extrabold transition-all duration-200 premium-shadow whitespace-nowrap"
+                className="inline-flex min-h-[48px] items-center gap-2 bg-[#7C3AED] hover:bg-[#6D28D9] text-white rounded-[12px] px-5 py-2.5 text-[13px] font-extrabold transition-all duration-200 premium-shadow whitespace-nowrap"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

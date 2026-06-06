@@ -101,16 +101,16 @@ export default function Localities() {
     <section className="py-14 bg-white w-full" id="localities">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
         {/* Title */}
-        <h2 className="text-[32px] font-extrabold text-center text-[#111827] tracking-tight mb-8">
+        <h2 className="text-[24px] sm:text-[28px] lg:text-[32px] font-extrabold text-center text-[#111827] tracking-tight mb-8">
           Our <span className="text-[#FF2D3F]">Focus</span> Localities
         </h2>
 
         {/* Localities responsive grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-[1200px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-[1200px] mx-auto">
           {localities.map(({ icon: Icon, label }) => (
             <motion.div
               key={label}
-              className="border border-[#F3F4F6] rounded-[20px] px-4 sm:px-6 lg:px-8 py-5 flex items-center gap-4 text-[#4B5563] font-bold text-[14px] cursor-default bg-white shadow-[0px_4px_20px_rgba(0,0,0,0.02)]"
+              className="border border-[#F3F4F6] rounded-[20px] px-4 py-4 sm:px-6 sm:py-5 lg:px-8 flex items-center gap-4 text-[#4B5563] font-bold text-[14px] cursor-default bg-white shadow-[0px_4px_20px_rgba(0,0,0,0.02)]"
               whileHover={{
                 borderColor: '#FF2D3F',
                 color: '#FF2D3F',

@@ -38,9 +38,9 @@ const quickLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-[#F3F4F6] pt-12 pb-8 w-full" id="footer">
+    <footer className="bg-white border-t border-[#F3F4F6] pt-12 lg:pt-16 pb-8 w-full" id="footer">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
           {/* LEFT COLUMN: Logo Stack */}
           <div className="flex flex-col items-start">
             <Logo className="mb-4" showTagline={true} />
@@ -96,8 +96,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom copyright bar */}
-        <div className="pt-8 border-t border-[#F3F4F6] text-left">
-          <p className="text-[12px] font-bold text-[#6B7280]">
+        <div className="pt-8 border-t border-[#F3F4F6] text-center sm:text-left">
+          <p className="text-[13px] font-bold text-[#6B7280]">
             © 2025 Urban Atlas. All rights reserved.
           </p>
         </div>

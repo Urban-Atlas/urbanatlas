@@ -35,7 +35,7 @@ export default function Navbar({ staticWhite = false }: NavbarProps) {
   // Scroll section observer
   useEffect(() => {
     if (pathname !== '/') {
-      setActiveSection('')
+      queueMicrotask(() => setActiveSection(''))
       return
     }
 
@@ -153,7 +153,7 @@ export default function Navbar({ staticWhite = false }: NavbarProps) {
         {/* Mobile Hamburger Toggle */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="lg:hidden p-2 rounded-lg hover:bg-black/5 transition-colors focus:outline-hidden"
+          className="lg:hidden p-2.5 rounded-xl hover:bg-black/5 transition-colors focus:outline-hidden"
           aria-label="Toggle Menu"
         >
           {isMenuOpen ? (
@@ -166,48 +166,48 @@ export default function Navbar({ staticWhite = false }: NavbarProps) {
 
       {/* Mobile Drawer */}
       <div
-        className={`lg:hidden fixed top-[73px] left-0 w-full bg-white border-b border-[#EBEBEB] shadow-lg transition-all duration-300 origin-top overflow-hidden ${
-          isMenuOpen ? 'max-h-[500px] opacity-100 py-6' : 'max-h-0 opacity-0 py-0'
+        className={`lg:hidden fixed top-[73px] left-0 w-full bg-white border-b border-[#EBEBEB] shadow-lg transition-all duration-300 origin-top overflow-y-auto ${
+          isMenuOpen ? 'max-h-screen opacity-100 py-6' : 'max-h-0 opacity-0 py-0'
         }`}
       >
-        <div className="flex flex-col px-6 gap-4">
-          <Link href={getPath('inventory')} onClick={handleLinkClick} className="text-[#222222] font-semibold text-base py-1">
+        <div className="flex flex-col px-6" style={{ paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 24px)' }}>
+          <Link href={getPath('inventory')} onClick={handleLinkClick} className="block w-full text-[#222222] font-semibold text-[15px] tracking-tight py-3 border-b border-[#F3F4F6]">
             Inventory
           </Link>
-          <Link href="/localities" onClick={handleLinkClick} className="text-[#222222] font-semibold text-base py-1">
+          <Link href="/localities" onClick={handleLinkClick} className="block w-full text-[#222222] font-semibold text-[15px] tracking-tight py-3 border-b border-[#F3F4F6]">
             Localities
           </Link>
-          <Link href={getPath('intelligence')} onClick={handleLinkClick} className="text-[#222222] font-semibold text-base py-1">
+          <Link href={getPath('intelligence')} onClick={handleLinkClick} className="block w-full text-[#222222] font-semibold text-[15px] tracking-tight py-3 border-b border-[#F3F4F6]">
             Intelligence
           </Link>
-          <Link href={getPath('broker-network')} onClick={handleLinkClick} className="text-[#222222] font-semibold text-base py-1">
+          <Link href={getPath('broker-network')} onClick={handleLinkClick} className="block w-full text-[#222222] font-semibold text-[15px] tracking-tight py-3 border-b border-[#F3F4F6]">
             Broker Network
           </Link>
-          <Link href={getPath('about')} onClick={handleLinkClick} className="text-[#222222] font-semibold text-base py-1">
+          <Link href={getPath('about')} onClick={handleLinkClick} className="block w-full text-[#222222] font-semibold text-[15px] tracking-tight py-3 border-b border-[#F3F4F6]">
             About
           </Link>
-          <Link href={getPath('contact')} onClick={handleLinkClick} className="text-[#222222] font-semibold text-base py-1">
+          <Link href={getPath('contact')} onClick={handleLinkClick} className="block w-full text-[#222222] font-semibold text-[15px] tracking-tight py-3 border-b border-[#F3F4F6]">
             Contact
           </Link>
-          <Link href="/community" onClick={handleLinkClick} className="text-[#222222] font-semibold text-base py-1">
+          <Link href="/community" onClick={handleLinkClick} className="block w-full text-[#222222] font-semibold text-[15px] tracking-tight py-3 border-b border-[#F3F4F6]">
             Community
           </Link>
-          <Link href="/professionals" onClick={handleLinkClick} className="text-[#222222] font-semibold text-base py-1">
+          <Link href="/professionals" onClick={handleLinkClick} className="block w-full text-[#222222] font-semibold text-[15px] tracking-tight py-3 border-b border-[#F3F4F6]">
             Professionals
           </Link>
 
           <div className="h-px bg-[#EBEBEB] my-2" />
 
-          <div className="flex flex-col gap-3">
+          <div className="mt-2 flex flex-col gap-3">
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] hover:bg-[#1DA851] text-white font-semibold text-[0.9375rem] py-3 rounded-xl transition-all duration-200 hover:shadow-md text-center flex items-center justify-center gap-2"
+              className="bg-[#25D366] hover:bg-[#1DA851] text-white font-semibold text-[0.9375rem] py-3 min-h-[52px] rounded-xl transition-all duration-200 hover:shadow-md text-center flex items-center justify-center gap-2"
             >
               🟢 Join WhatsApp Community
             </a>
-            <TallyModalTrigger className="bg-[#FF385C] hover:bg-[#E31C5F] text-white font-semibold text-[0.9375rem] py-3 rounded-xl transition-all duration-200 hover:shadow-md text-center w-full">
+            <TallyModalTrigger className="bg-[#FF385C] hover:bg-[#E31C5F] text-white font-semibold text-[0.9375rem] py-3 min-h-[52px] rounded-xl transition-all duration-200 hover:shadow-md text-center w-full">
               Request Access
             </TallyModalTrigger>
           </div>

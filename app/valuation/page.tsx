@@ -118,8 +118,8 @@ export default function ValuationPage() {
       }
 
       setIsSuccess(true)
-    } catch (err: any) {
-      setSubmitError(err.message || 'Something went wrong.')
+    } catch (err: unknown) {
+      setSubmitError(err instanceof Error ? err.message : 'Something went wrong.')
     } finally {
       setIsSubmitting(false)
     }
