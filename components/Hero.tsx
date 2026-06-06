@@ -35,12 +35,12 @@ function RedCheckIcon({ className }: { className?: string }) {
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white pt-6 pb-8 sm:pt-8 sm:pb-10">
+    <section className="relative overflow-hidden bg-white sm:pt-8 sm:pb-10">
       {/* Visual backdrop gradient to replicate the exact layout proportions */}
       <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-b from-[#FFFDFD] to-[#FFF8F8] opacity-60 pointer-events-none z-0 hidden lg:block" />
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 relative z-10">
-        <div className="flex flex-col md:flex-row lg:grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 relative z-10">
+        <div className="flex flex-col md:flex-row lg:grid lg:grid-cols-2 gap-8 md:gap-10 lg:gap-8 items-center">
           {/* LEFT SIDE CONTENT */}
           <div className="flex flex-col items-start w-full md:w-[55%] lg:w-full">
             {/* Typography Matched Heading */}
@@ -102,8 +102,8 @@ export default function Hero() {
           </div>
 
           {/* RIGHT SIDE CONTENT - Image containing stats and illustration */}
-          <div className="w-full md:w-[45%] lg:w-full mt-8 md:mt-0 flex-shrink-0 relative z-10">
-            <div className="relative w-full h-[280px] sm:h-[360px] md:h-[300px] lg:h-[480px] max-w-md lg:max-w-xl mx-auto">
+          <div className="hidden md:flex w-full md:w-[45%] lg:w-full mt-8 md:mt-0 flex-shrink-0 relative z-10">
+            <div className="relative w-full h-[280px] sm:h-[360px] md:h-[300px] lg:h-[400px] max-w-md lg:max-w-xl mx-auto">
               <Image
                 src="/hero-left.png"
                 alt="Urban Atlas Plot Stats"
