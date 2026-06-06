@@ -88,7 +88,7 @@ export default function TrustSection() {
           {/* LEFT — Market Report card */}
           <div className="lg:col-span-5">
             <motion.div
-              className="bg-white border border-[#FFF1F3] rounded-[20px] p-4 sm:p-6 lg:p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.03)] h-full flex flex-col justify-between gap-5"
+              className="bg-white border border-[#FFF1F3] rounded-[20px] p-4 sm:p-6 lg:p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.03)] h-full flex flex-col md:flex-row justify-between items-center md:items-stretch gap-5 md:gap-6"
               whileHover={{ y: -4, boxShadow: '0px 10px 40px rgba(255,45,63,0.06)' }}
               transition={{ duration: 0.22 }}
             >
@@ -116,8 +116,8 @@ export default function TrustSection() {
                 </motion.a>
               </div>
 
-              <div className="w-full md:w-1/2 flex justify-center md:justify-end items-center relative min-h-[140px] sm:min-h-[200px]">
-                <div className="relative w-full max-w-[120px] sm:max-w-[180px] h-full min-h-[140px] sm:min-h-[220px]">
+              <div className="w-full md:w-1/2 flex justify-center md:justify-end items-center relative min-h-[160px] sm:min-h-[200px]">
+                <div className="relative w-full max-w-[140px] sm:max-w-[180px] h-full min-h-[160px] sm:min-h-[220px]">
                   <Image
                     src="/report_chart.png"
                     alt="Lucknow Plot Market Report"
@@ -133,7 +133,7 @@ export default function TrustSection() {
           {/* RIGHT — Why People Trust Urban Atlas */}
           <div className="lg:col-span-7">
             <div className="bg-gradient-to-br from-white to-[#FFFDFD] border border-[#FFF1F3] rounded-[20px] p-4 sm:p-6 lg:p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.03)] h-full flex flex-col justify-between">
-              <div className="flex flex-row items-center gap-3 sm:gap-5 mb-5 sm:mb-8">
+              <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-5 mb-5 sm:mb-8">
                 {/* Shield Icon in Circle */}
                 <div className="w-[50px] h-[50px] lg:w-[64px] lg:h-[64px] rounded-full bg-[#FFF1F3] flex items-center justify-center flex-shrink-0 border-2 border-[#FF2D3F]">
                   <svg className="w-5 h-5 lg:w-7 lg:h-7" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF2D3F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
